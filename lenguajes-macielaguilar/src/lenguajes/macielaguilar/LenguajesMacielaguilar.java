@@ -17,6 +17,12 @@ public class LenguajesMacielaguilar {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("mi primer programa de java");
+        Imc objeto=new Imc();
+        System.out.println(objeto.calcular());
+                float peso=98f;
+                float altura=1.79f;
+                //float imc=peso/(altura*altura);
+               // System.out.println("Tu imc es:"+imc);
     }
     
 }
