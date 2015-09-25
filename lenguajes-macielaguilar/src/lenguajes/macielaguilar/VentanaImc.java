@@ -29,9 +29,9 @@ public class VentanaImc extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textoPeso = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        textoAltura = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         etiquetaResultado = new javax.swing.JLabel();
 
@@ -39,13 +39,19 @@ public class VentanaImc extends javax.swing.JFrame {
 
         jLabel1.setText("introduce tu peso");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        textoPeso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                textoPesoActionPerformed(evt);
             }
         });
 
         jLabel2.setText("introduce tu altura");
+
+        textoAltura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoAlturaActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("calcular");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -69,8 +75,8 @@ public class VentanaImc extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                        .addComponent(jTextField2)))
+                        .addComponent(textoPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                        .addComponent(textoAltura)))
                 .addContainerGap(189, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(etiquetaResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -82,11 +88,11 @@ public class VentanaImc extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textoAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
                 .addGap(60, 60, 60)
@@ -97,15 +103,25 @@ public class VentanaImc extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void textoPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoPesoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_textoPesoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-Imc objeto=new Imc((float)12.4);
-         etiquetaResultado.setText(""+objeto.calcular());
-        // TODO add your handling code here:
+  //Imc objeto=new Imc((float)12.4);
+       //  etiquetaResultado.setText(""+objeto.calcular());
+           // TODO add your handling code here:
+        float peso =Float.parseFloat(textoPeso.getText());
+         float altura=Float.parseFloat(textoAltura.getText());
+        
+        Imc algo = new Imc(peso,altura);
+        etiquetaResultado.setText(""+algo.calcular());
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void textoAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAlturaActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_textoAlturaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,7 +163,7 @@ Imc objeto=new Imc((float)12.4);
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField textoAltura;
+    private javax.swing.JTextField textoPeso;
     // End of variables declaration//GEN-END:variables
 }

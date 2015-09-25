@@ -21,6 +21,10 @@ public class LenguajesMacielaguilar {
         System.out.println(objeto.calcular());
                 float peso=98f;
                 float altura=1.79f;
+                
+                String x ="12";
+                float valor = Float.parseFloat(x);
+                System.out.println(valor);
                 //float imc=peso/(altura*altura);
                // System.out.println("Tu imc es:"+imc);
     }

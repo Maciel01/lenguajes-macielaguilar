@@ -12,7 +12,13 @@ package lenguajes.macielaguilar;
 public class Imc {
     float peso;
     float altura;
-    
+    //constructor
+    public Imc(float p,float a){
+        peso = p;
+        altura = a;
+
+}
+    //constructor
     public Imc(){
     
         peso=98f;
@@ -37,10 +43,14 @@ public class Imc {
         l=b;
         
     }
+    
+    
     public float calcular(){
         float resultadoImc=peso/(altura*altura);
         return resultadoImc;
-    }
-   
     
+   if ( resultadoImc <20){
+   System.out.println("sano");
+    }
+
 }
