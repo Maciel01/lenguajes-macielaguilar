@@ -1,32 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lenguajes.macielaguilar;
 
-/**
- *
- * @author T-107
- */
 public class LenguajesMacielaguilar {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
         System.out.println("mi primer programa de java");
         Imc objeto=new Imc();
         System.out.println(objeto.calcular());
                 float peso=98f;
                 float altura=1.79f;
                 
-                String x ="12";
-                float valor = Float.parseFloat(x);
-                System.out.println(valor);
-                //float imc=peso/(altura*altura);
-               // System.out.println("Tu imc es:"+imc);
+               // String x ="12";
+               // float valor = Float.parseFloat(x);
+               // System.out.println(valor);
+                float imc=peso/(altura*altura);
+                System.out.println("Tu imc es:"+imc);
     }
     
 }

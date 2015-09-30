@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lenguajes.macielaguilar;
 
-/**
- *
- * @author T-107
- */
+
 public class Imc {
     float peso;
     float altura;
@@ -33,14 +26,14 @@ public class Imc {
         long l=2;
         
         //reasignamos
-        b=(byte)i;
-        l=i;
-        s=(short)l;
-        s=b;
-        l=s;
-        s=(short)l;
-        s=(short)i;
-        l=b;
+      //  b=(byte)i;
+        //l=i;
+       // s=(short)l;
+      //  s=b;
+      //  l=s;
+      //  s=(short)l;
+      //  s=(short)i;
+      //  l=b;
         
     }
     
@@ -49,8 +42,5 @@ public class Imc {
         float resultadoImc=peso/(altura*altura);
         return resultadoImc;
     
-   if ( resultadoImc <20){
-   System.out.println("sano");
     }
-
 }
