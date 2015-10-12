@@ -211,7 +211,7 @@ public class VentanaSecretaria extends javax.swing.JFrame {
                 textoColonia.getText(),
                 comboMunicipio.getSelectedItem().toString());
         //creamos al cliente
-        Cliente c=new Cliente(textoNombre.getText()
+        cliente c=new cliente(textoNombre.getText()
                 , textoEmail.getText(),d);
     }//GEN-LAST:event_jButton1ActionPerformed
 
